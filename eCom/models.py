@@ -1,3 +1,4 @@
+from pyexpat import model
 from django.db import models
 from django.contrib.auth.models import User
 
@@ -28,3 +29,10 @@ class Review(models.Model):
 
     def __str__(self):
         return self.rating
+
+class Cart(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.SET_NULL, null=True)
+    user_name = models.CharField(max_length=200, default='kelvin')
+
+    def __str__(self):
+        return self.product
