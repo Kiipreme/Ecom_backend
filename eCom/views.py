@@ -17,10 +17,10 @@ class ProductDetail(generics.RetrieveUpdateDestroyAPIView):
 #     queryset = Product.delete
 #     serializer_class = ProductSerializer
 
-class CartList(generics.ListCreateAPIView):
-    queryset = Cart.objects.all()
-    serializer_class = CartSerializer
+# class CartList(generics.ListCreateAPIView):
+#     queryset = Cart.objects.all()
+#     serializer_class = CartSerializer
 
-class CartDetail(generics.RetrieveDestroyAPIView):
-    queryset = Cart.objects.all()
-    serializer_class = CartSerializer
+# class CartDetail(generics.RetrieveDestroyAPIView):
+#     queryset = Cart.objects.all()
+#     serializer_class = CartSerializer
